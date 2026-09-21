@@ -1,0 +1,9 @@
+.next
+node_modules
+.env
+.env.local
+.vercel
+.DS_Store
+employee-pins.csv
+employee-pin-hashes.csv
+employees-import.csv
