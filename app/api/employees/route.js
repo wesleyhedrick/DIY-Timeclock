@@ -9,11 +9,15 @@ export async function GET() {
     .order("display_name");
 
   if (error) {
-  console.error("Supabase employees query failed:", error);
-  return NextResponse.json(
-    { error: "Unable to load employees." },
-    { status: 500 }
-  );
+    console.error("Supabase employees query failed:", error);
 
+    return NextResponse.json(
+      { error: "Unable to load employees." },
+      { status: 500 }
+    );
   }
-  }
+
+  return NextResponse.json({
+    employees: data ?? []
+  });
+}
