@@ -8,6 +8,11 @@ export async function GET() {
     .eq("active", true)
     .order("display_name");
 
-  if (error) return NextResponse.json({ error:"Unable to load employees." }, {status:500});
-  return NextResponse.json({ employees:data });
+  if (error) {
+  console.error("Supabase employees query failed:", error);
+  return NextResponse.json(
+    { error: "Unable to load employees." },
+    { status: 500 }
+  );
+
 }
