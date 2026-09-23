@@ -266,17 +266,6 @@ export default function EmployeePage() {
                   maxLength={12}
                 />
 
-                <label htmlFor="notes">
-                  Notes <span>(optional)</span>
-                </label>
-                <textarea
-                  id="notes"
-                  rows="4"
-                  placeholder="What are you helping with?"
-                  value={notes}
-                  onChange={(e) => setNotes(e.target.value)}
-                  disabled
-                />
               </div>
 
               <div className="action-panel">
