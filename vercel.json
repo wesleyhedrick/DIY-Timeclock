@@ -1,8 +1,0 @@
-{
-  "crons": [
-    {
-      "path": "/api/reports/weekly-help-time",
-      "schedule": "0 13 * * 0"
-    }
-  ]
-}
